@@ -2,6 +2,18 @@ import { Request, Response, NextFunction } from "express";
 import * as taskService from "../services/taskService";
 import { Task } from "../models/taskModel";
 
+
+// src/api/v1/controllers/taskController.ts
+export const createTask = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    try {
+        // TODO: Implement task creation logic
+        res.status(201).json({ message: "Create task endpoint hit!" });
+    } catch (error) {
+        next(error);
+    }
+};
+
+
 /**
  * Controller for creating a task.
  * @param req - Express request object.
