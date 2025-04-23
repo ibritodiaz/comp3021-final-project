@@ -1,8 +1,8 @@
-echo /**
-* Repository function to create a task in the database.
-* @param taskData - Data of the task to create.
-* @returns Created task with ID.
-*/
+/**
+ * Repository function to create a task in the database.
+ * @param taskData - Data of the task to create.
+ * @returns Created task with ID.
+ */
 export interface Task {
   id: string;
   userId: string;
@@ -13,7 +13,8 @@ export interface Task {
 }
 
 export const createTask = async (taskData: Task): Promise<Task> => {
-  return { id: "placeholder_id", ...taskData };
+  const { id, ...rest } = taskData;
+  return { id: "placeholder_id", ...rest };
 };
 
 /**
@@ -64,4 +65,4 @@ export const deleteTask = async (
   taskId: string
 ): Promise<{ id: string; deleted: boolean }> => {
   return { id: taskId, deleted: true };
-}; > src\api\v1\repositories\taskRepository.ts
+};
