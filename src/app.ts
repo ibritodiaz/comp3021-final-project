@@ -1,4 +1,4 @@
-echo import express, { Request, Response, Express } from "express";
+import express, { Request, Response, Express } from "express";
 import taskRoutes from "./api/v1/routes/taskRoutes";
 
 const app: Express = express();
@@ -14,4 +14,4 @@ app.use((err: Error, req: Request, res: Response): void => {
   res.status(500).json({ error: "Internal Server Error" });
 });
 
-export default app; > src\app.ts
+export default app;
