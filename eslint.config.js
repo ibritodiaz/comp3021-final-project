@@ -12,8 +12,8 @@ module.exports = [{
     security: security,
     '@typescript-eslint': typescriptEslint
   },
-  extends: [
-    'plugin:security/recommended',
-    'plugin:@typescript-eslint/recommended'
-  ]
+  rules: {
+    ...security.configs.recommended.rules,
+    ...typescriptEslint.configs.recommended.rules
+  }
 }];
