@@ -1,4 +1,4 @@
-echo name: ESLint Security Scan
+name: ESLint Security Scan
 on:
   push:
     branches: [ main ]
