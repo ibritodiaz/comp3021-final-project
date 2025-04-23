@@ -1,9 +1,9 @@
-import globals from 'globals';
-import security from 'eslint-plugin-security';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import parser from '@typescript-eslint/parser';
+const globals = require('globals');
+const security = require('eslint-plugin-security');
+const typescriptEslint = require('@typescript-eslint/eslint-plugin');
+const parser = require('@typescript-eslint/parser');
 
-export default [{
+module.exports = [{
   languageOptions: {
     globals: globals.node,
     parser: parser
