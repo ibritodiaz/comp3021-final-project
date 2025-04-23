@@ -13,8 +13,8 @@ export interface Task {
 }
 
 export const createTask = async (taskData: Task): Promise<Task> => {
-  const { id, ...rest } = taskData;
-  return { id: "placeholder_id", ...rest };
+  const { userId, title, priority, status, dueDate } = taskData;
+  return { id: "placeholder_id", userId, title, priority, status, dueDate };
 };
 
 /**
