@@ -14,6 +14,7 @@ module.exports = [{
   },
   rules: {
     ...security.configs.recommended.rules,
-    ...typescriptEslint.configs.recommended.rules
+    ...typescriptEslint.configs.recommended.rules,
+    '@typescript-eslint/no-require-imports': 'off'
   }
 }];
