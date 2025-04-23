@@ -1,6 +1,8 @@
 module.exports = {
-  env: {
-    node: true
+  languageOptions: {
+    globals: {
+      node: true
+    }
   },
   parser: '@typescript-eslint/parser',
   extends: [
